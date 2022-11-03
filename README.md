@@ -1,6 +1,6 @@
 # go-movies-crud
 
-This is a simple rest http server with movies and authors.
+This is a simple rest http server with movies and directors.
 
 Make with MUX library and GOLANG.
 
