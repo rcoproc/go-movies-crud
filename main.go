@@ -3,11 +3,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
 	"log"
 	"math/rand"
 	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 type Movie struct {
@@ -58,6 +59,7 @@ func createMovie(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	var movie Movie
+
 	_ = json.NewDecoder(r.Body).Decode(&movie)
 	movie.ID = strconv.Itoa(rand.Intn(100000000))
 	movies = append(movies, movie)
